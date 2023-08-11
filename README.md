@@ -73,9 +73,50 @@ The core of this project is the fraud detection model. The model will be trained
 
 The effectiveness of the fraud detection model will be evaluated using metrics such as accuracy, precision, recall, F1-score, and ROC-AUC. The model's performance will be assessed on both training and testing datasets to ensure it generalizes well to new, unseen data.
 
-## Contributing
+## Installation
+1. Clone the repository: `git clone https://github.com/tushar2704/Insurance-Claims-Fraud-detection.git`
+2. Navigate to the project directory: `cd Insurance-Claims-Fraud-detection`
+3. Install the dependencies: `pip install -r requirements.txt`
+## Usage
+1. Start the Flask API: `python main.py`
+2. Access the web interface at your local server : `http://localhost:5000`
+3. 3. Run the model on test data: `python test.py`
 
-Contributions to this project are welcome! If you find any issues or have suggestions for improvements, please open an issue or a pull request in the repository. Make sure to follow the [code of conduct](CODE_OF_CONDUCT.md) while contributing.
+## Deploying and Containerizing Your Application with Docker
+
+Before you start, make sure you have [Docker](https://www.docker.com/get-started) installed on your system. 
+
+
+1. **Clone the Repository:** First, clone the repository for your application to your local machine or cloud instance using the following commands:
+   ```sh
+   git clone https://github.com/tushar2704/Insurance-Claims-Fraud-detection.git
+   cd Insurance-Claims-Fraud-detection
+2.**Build the Docker Image:** Replace your-app-name with a suitable name for your application.
+   ```
+   docker build -t Insurance App .
+
+ ```
+
+
+ ## To deploy on an AWS EC2 instance
+- Setup an EC2 instance and SSH to the instance.Use this as a [guide](https://www.machinelearningplus.com/deployment/deploy-ml-model-aws-ec2-instance/).
+- Run
+   ```
+  git clone https://github.com/tushar2704/Insurance-Claims-Fraud-detection.git
+  ```
+- Start up [Docker](https://docs.docker.com) and run
+  ```
+  docker build -t dockerfile .
+  ```
+- run
+  ```
+  docker run -e PORT=8080 dockerfile
+  ```
+- You can now get predictions from
+  ```
+  http://<ec2-public-IP>:8080/predict
+  ```
+
 
 ## License
 
