@@ -8,9 +8,9 @@ import numpy as np
 import os
 app = Flask(__name__)
 
-model= pickle.load(open('model1.pickle','rb'))
-encoder = pickle.load(open('encoder1.pkl','rb'))
-column_names= pickle.load(open('features1.pkl','rb'))
+model= pickle.load(open('D:\\Insurance-Claims-Fraud-detection\\src\\model\\model1.pickle','rb'))
+encoder = pickle.load(open('D:\\Insurance-Claims-Fraud-detection\\src\\model\\encoder1.pkl','rb'))
+column_names= pickle.load(open('D:\\Insurance-Claims-Fraud-detection\\src\\model\\features1.pkl','rb'))
  
 
 @app.route('/predict', methods=['POST'])
